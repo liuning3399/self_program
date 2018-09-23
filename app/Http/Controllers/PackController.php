@@ -16,7 +16,7 @@ class PackController extends Controller
         //dispatch( new ticketTest()->delay());
         dispatch( new ticketTest());
         //echo phpinfo();
-        echo "刘宁帅得不行";
+        echo "刘宁帅得不行啊";
         exit;
     }
     public function study()
