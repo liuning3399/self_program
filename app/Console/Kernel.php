@@ -14,6 +14,9 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        \App\Console\Commands\TestCreate::class,
+        // 注册我们自己的命令
+        \App\Console\Commands\TestArtisan::class,
     ];
 
     /**

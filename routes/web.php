@@ -22,4 +22,7 @@ Route::get('/pack', 'PackController@index');
 //学习资料路由
 Route::get('/study', 'PackController@study');
 Route::get('/about', 'PackController@about');
+//redis测试
+Route::get('testRedis','RedisController@testRedis')->name('testRedis');
+
 
