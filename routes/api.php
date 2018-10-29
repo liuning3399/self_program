@@ -22,5 +22,6 @@ $api=app('Dingo\Api\Routing\Router');
 APIRoute::version('v1',function($api){
     $api->group(['namespace'=>'App\Api\Controllers'],function ($api){
         $api->resource('agentFans','AgentFansController');
+        $api->resource('weather','WeatherController');//天气API接口
     });
 });
