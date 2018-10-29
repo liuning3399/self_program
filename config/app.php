@@ -146,6 +146,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Stevenyangecho\UEditor\UEditorServiceProvider::class,
         //Encore\Admin\Providers\AdminServiceProvider::class
 
         /*
@@ -216,6 +217,7 @@ return [
         'APIRoute'=>Dingo\Api\Facade\Route::class,
         'API'=>\Dingo\Api\Facade\API::class,
         'Charts' => ConsoleTVs\Charts\Classes\Chartjs\Chart::class,
+        'UEditor'=>Stevenyangecho\UEditor\UEditorServiceProvider::class,
     ],
 
 ];

@@ -72,9 +72,9 @@ class MovieController extends Controller
     protected function grid()
     {
         return Admin::grid(Movie::class, function (Grid $grid) {
-
             $grid->id('ID')->sortable();
             $grid->name('名字');
+            $grid->content('内容')->style("min-width:20px;max-width: 1000px;display:block;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;");
             $grid->created_at();
             $grid->updated_at();
         });
@@ -91,6 +91,7 @@ class MovieController extends Controller
 
             $form->display('id', 'ID');
             $form->display('name', '名字');
+            $form->ueditor('content', '内容')->rules('required');
             $form->display('created_at', 'Created At');
             $form->display('updated_at', 'Updated At');
         });
