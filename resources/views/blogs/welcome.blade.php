@@ -76,16 +76,16 @@
     <div class="blogsbox">
         @foreach($data as $vo)
             <div class="blogs" data-scroll-reveal="enter bottom over 1s" >
-            <h3 class="blogtitle"><a href="#" target="_blank">{{$vo->article_title}}</a></h3>
-            <span class="blogpic"><a href="#" title="" target="_blank"><img src="{{$vo->article_images}}" style="height: 120px;" alt=""></a></span>
-            <p class="blogtext">{{$vo->article_content}}</p>
+            <h3 class="blogtitle"><a href="/detail?id={{$vo->id}}" target="_blank">{{$vo->name}}</a></h3>
+            <span class="blogpic"><a href="#" title="" target="_blank"><img src="{{$vo->images}}" style="height: 120px;" alt=""></a></span>
+            <p class="blogtext">{{htmlspecialchars($vo->content)}}</p>
             <div class="bloginfo">
                 <ul>
-                    <li class="author"><a>{{$vo->user_id}}</a></li>
-                                        <li class="lmname"><a href="#">{{$vo->article_like_count}}</a></li>
-                                        <li class="timer">{{$vo->article_date}}</li>
-                    <li class="view"><span>{{$vo->article_views}}</span> </li>
-                    <li class="comment">{{$vo->article_comment_count}}</li>
+                    <li class="author"><a>{{$vo->userid}}</a></li>
+                                        <li class="lmname"><a href="#">{{$vo->likes}}</a></li>
+                                        <li class="timer">{{$vo->updated_at}}</li>
+                    <li class="view"><span>{{$vo->views}}</span> </li>
+                    <li class="comment">{{$vo->comments}}</li>
                 </ul>
             </div>
         </div>
@@ -99,9 +99,9 @@
         <h2 class="hometitle">点击排行</h2>
     <ul class="sidenews">
     @foreach($articles as $vo)
-        <li> <i><img src="{{$vo->article_images}}" style="width:100%;"></i>
-            <p><a href="{{$vo->article_title}}" target="_blank">{{$vo->article_title}}</a></p>
-            <span>{{$vo->article_date}}</span> <span>作者：{{$vo->user_id}}</span></li>
+        <li> <i><img src="{{$vo->images}}" style="width:100%;"></i>
+            <p><a href="{{$vo->name}}" target="_blank">{{$vo->name}}</a></p>
+            <span>{{$vo->updated_at}}</span> <span>作者：{{$vo->userid}}</span></li>
    @endforeach
                         </ul>
 </div>
@@ -141,7 +141,7 @@
 <footer>
     <p><b>©</b>  2015-2018 Powered by
         <a>追梦人的博客</a>
-                    <a href="#" target="_blank">赣ICP备16067858号-1</a>
+                    <a href="#" target="_blank">赣ICP备858号-1</a>
                 &nbsp;
         <span style="display: inline-block;">
         <!-- <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1274268318'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1274268318%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script> -->

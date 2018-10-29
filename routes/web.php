@@ -26,5 +26,6 @@ Route::get('/about', 'PackController@about');
 Route::get('testRedis','RedisController@testRedis')->name('testRedis');
 //博客
 Route::get('/','Blogs\WelcomeController@index');
+Route::get('/detail','Blogs\DetailController@index');
 
 

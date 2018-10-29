@@ -21,12 +21,12 @@ class WelcomeController extends Controller
     public function index()
     {
         //$data = zj_articles::all();
-        $data = DB::table('zj_articles')->paginate(12);
+        $data = DB::table('movies')->paginate(12);
         $links = zj_friend_links::all();
         $label = zj_labels::all();
-        $articles = DB::table('zj_articles')
+        $articles = DB::table('movies')
              ->select('*')
-             ->orderBy('article_views', 'DESC')
+             ->orderBy('views', 'DESC')
              ->take(5)
              ->get();
         return view('blogs.welcome',compact('data',"links","label","articles"));
